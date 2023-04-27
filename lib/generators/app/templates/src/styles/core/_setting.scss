@@ -1,0 +1,86 @@
+@charset "UTF-8";
+//-----------------------------------------------------	
+//@name    variable
+//@desc    define base variable
+//@author  guozd
+//@date    2015-07-21
+//-----------------------------------------------------	
+
+
+// color
+$red:            #EB5757 !default;
+$blue:           #1890FF !default;
+$black:      	 #000 !default;
+$orange:         #F2994A !default;
+$orangeDarker:   #e7652b !default;
+$green:          #00C277 !default;
+$gray:           #999 !default;
+$grayDark:       #222 !default;
+$grayDarker:     #222 !default;
+$grayLight:      #ccc !default;
+$white:          rgba(255,255,255, 1) !default;
+$white85:        rgba(255,255,255, .85) !default;
+$white65:        rgba(255,255,255, .65) !default;
+$white45:        rgba(255,255,255, .45) !default;
+$borderColor:    #d2d2d2 !default;             //页面大部分模块框架边框颜色
+$inpBorderColor: #d9d9d9 #a7ceec !default;     //页面输入框边框正常颜色和获取焦点后颜色,通过nth($inpBorderColor,1)、nth($inpBorderColor,2)分别读取
+
+$primaryColor:     #246CF9;
+$subColor:         #2b9262;
+$iconColor:        #222;
+$linkColor:        #246CF9;
+$linkHoverColor:   #246CF9;
+$darkBgColor:      #212024;
+$darkBlockBgColor: #2C2D30;
+$darkSubBgColor:   #484A4E;
+$darkLineBgColor:  rgba(255, 255, 255, 0.3);
+$placeholderColor: #b0b0b0;
+
+//分险等级
+$safety:        rgba(0, 194, 119, 1);
+$nervous:       rgba(247, 147, 26, 1);
+$highRisk:       rgba(231, 95, 15, 1);
+$liquidation:    rgba(255, 0, 0, 1);
+
+$safetyBg:        rgba(0, 194, 119, .1);
+$nervousBg:       rgba(247, 147, 26, .1);
+$highRiskBg:       rgba(231, 95, 15, .1);
+$liquidationBg:    rgba(255, 0, 0, .1);
+
+
+
+// font family
+$baseLineHeight: 1.5 !default;
+$fontYaHei:      "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif !default;
+$fontSimsun:     "\5B8B\4F53", Arial, sans-serif !default;
+$fontArial:      Arial, sans-serif !default;
+
+// font size
+$fontSizeBase:   14px !default;
+$fontSizeSm:     $fontSizeBase - 2px; //12px
+$fontSizeLg:     $fontSizeBase + 2px; //16px
+$fontSizeXl:     $fontSizeBase + 4px; //18px
+$fontSizeXxl:     $fontSizeBase + 6px; //20px
+
+//responsive width
+$screen_min_xs: 480px !default;   
+$screen_max_xs: $screen_min_xs - 1px !default;
+$screen_min_sm: 576px !default;   
+$screen_max_sm: $screen_min_sm - 1px !default;
+$screen_min_md: 768px !default;   
+$screen_max_md: $screen_min_md - 1px !default;
+$screen_min_lg: 992px !default; 
+$screen_max_lg: $screen_min_lg - 1px !default;
+$screen_min_xl: 1200px !default;   
+$screen_max_xl: $screen_min_xl - 1px !default;
+$screen_min_xxl: 1600px !default;
+$screen_max_xxl: $screen_min_xxl - 1px !default;
+
+//some size
+$headerHeight: 86px !default;
+$headerHeightMd: 64px !default;
+$siderHeaderHeight: $headerHeight !default;
+$siderHeaderHeightMd: $headerHeightMd !default;
+
+$siderbarTabHeight: 52px !default;
+$siderbarHeaderHeight: 54px !default;

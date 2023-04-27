@@ -1,0 +1,23 @@
+{
+    "common": {
+        "Sun": "Sun",
+        "Mon": "Mon",
+        "Tue": "Tue",
+        "Wed": "Wed",
+        "Thu": "Thu",
+        "Fri": "Fri",
+        "Sat": "Sat",
+        "minutes": "minutes",
+        "hours": "hours",
+        "days": "days",
+        "months": "months",
+        "Days": "Days",
+        "Day": "Day",
+        "login120": "Your account login has expired / have logged in on another device, please log in again",
+        "quote": ": ",
+        "declinedSign": "You declined the action in your wallet.",
+        "apr": "APR:",
+        "not_reached": "This function can be used when the total equity of the pledged account reaches $100,000. Please deposit more assets and try again!",
+        "connect_wallet": "Please connect the wallet first!"
+    }
+}

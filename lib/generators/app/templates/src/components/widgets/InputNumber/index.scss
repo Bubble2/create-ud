@@ -1,0 +1,21 @@
+@import "../../../styles/core/base";
+
+.input-number-container {
+    position: relative;
+
+    .input-number {
+        width: 100%;
+    }
+
+    .set-max {
+        color: $blue;
+        cursor: pointer;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        height: auto;
+        -webkit-appearance: none;
+    }
+
+}

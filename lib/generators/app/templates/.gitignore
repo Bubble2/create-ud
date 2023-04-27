@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+# dist
+build
+app-veta-finance.zip
+test-app-veta-finance.zip

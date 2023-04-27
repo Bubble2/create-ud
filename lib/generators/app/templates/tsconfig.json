@@ -1,0 +1,78 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es5",
+        "lib": [
+            "es2019",
+            "dom"
+        ],
+        "strict": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "jsx": "react",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "allowJs": true,
+        "experimentalDecorators": true,
+        "downlevelIteration": true,
+        "paths": {
+            "@components/*": [
+                "./src/components/*"
+            ],
+            "@pages/*": [
+                "./src/pages/*"
+            ],
+            "@styles/*": [
+                "./src/styles/*"
+            ],
+            "@images/*": [
+                "./src/images/*"
+            ],
+            "@utils/*": [
+                "./src/utils/*"
+            ],
+            "@router/*": [
+                "./src/router/*"
+            ],
+            "@connectors/*": [
+                "./src/connectors/*"
+            ],
+            "@constants/*": [
+                "./src/constants/*"
+            ],
+            "@constants": [
+                "./src/constants"
+            ],
+            "@hooks/*": [
+                "./src/hooks/*"
+            ],
+            "@context/*": [
+                "./src/context/*"
+            ],
+            "@state/*": [
+                "./src/state/*"
+            ],
+            "@js/*": [
+                "./src/js/*"
+            ],
+            "@apollo-client/*": [
+                "src/apollo-client/*"
+            ],
+            "@src/*": [
+                "./src/*"
+            ],
+        },
+    },
+    "include": [
+        "./typings.d.ts",
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "./src/js/**/*"
+    ]
+}
