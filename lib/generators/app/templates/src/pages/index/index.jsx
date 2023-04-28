@@ -18,7 +18,7 @@ import useContractAddress from '@hooks/useContractAddress';
 <%}-%>
 
 export default () => {
-    <%if (fnFeatures.includes('web3')) {-%>
+<%if (fnFeatures.includes('web3')) {-%>
     const { address } = useAccount();
 
     const { tokenList, getTokenByName } = useTokenList()
@@ -66,7 +66,7 @@ export default () => {
         </div>
     </>
     );
-    <%}else{-%>
+<%}else{-%>
         return <div>Welcome</div>
-    <%}-%>
+<%}-%>
 };
