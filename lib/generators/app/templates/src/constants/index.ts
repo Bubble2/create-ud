@@ -1,3 +1,4 @@
+<%if (fnFeatures.includes('web3')){%>
 import { avalanche, bsc, mainnet, goerli } from 'wagmi/chains'
 
 //支持的链
@@ -24,3 +25,4 @@ export enum TransactionStatus{
 
 //主币地址
 export const NATIVE_TOKEN_ADDRESS = '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee';
+<%}%>

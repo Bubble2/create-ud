@@ -1,16 +1,13 @@
 import React, { useState, useMemo, useEffect, useContext } from "react";
 import { Button } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchUserById } from '@state/indexSlice'
-import { useAccount, useBalance } from 'wagmi'
-import useTokenList from '@hooks/useTokenList';
-import useTokenBalance from '@hooks/useTokenBalance';
-import { useChainId } from '@hooks/useChainId';
-import { useTranslation } from 'react-i18next';
 import styles from './index.scss';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
-import WalletModal from '@components/biz/walletModal'
+import { useDispatch, useSelector } from 'react-redux';
+<%if (fnFeatures.includes('web3')) {-%>
+import { useAccount, useBalance } from 'wagmi'
+import useTokenList from '@hooks/useTokenList';
+import useTokenBalance from '@hooks/useTokenBalance';
 import { usePrepareContractWrite } from 'wagmi'
 import valultAbi from '@constants/abi/vault-abi.json'
 import { parseUnits } from '@ethersproject/units';
@@ -18,10 +15,10 @@ import ApproveBtn from '@components/biz/approveBtn';
 import { useContractWriteWithNotification, useWaitForTransactionWithNotification } from '@hooks/useContractWithNotification'
 import ConnectWallet from '@components/biz/connectWallet';
 import useContractAddress from '@hooks/useContractAddress';
+<%}-%>
 
 export default () => {
-    const dispatch = useDispatch();
-    const [walletModalOpen, setWalletModalOpen] = useState(false)
+    <%if (fnFeatures.includes('web3')) {-%>
     const { address } = useAccount();
 
     const { tokenList, getTokenByName } = useTokenList()
@@ -69,4 +66,7 @@ export default () => {
         </div>
     </>
     );
+    <%}else{-%>
+        return <div>Welcome</div>
+    <%}-%>
 };

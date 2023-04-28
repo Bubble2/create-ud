@@ -8,8 +8,10 @@ import 'core-js/es6/map';
 import 'core-js/es6/set';
 import { Spin } from 'antd';
 import store from '../configStore'
+<%if (fnFeatures.includes('web3')) {-%>
 import { WagmiConfig } from 'wagmi'
 import client from '@utils/createClient'
+<%}-%>
 
 if (process.env.NODE_ENV !== 'production' && module.hot) {
     module.hot.accept('../store', () => store.replaceReducer(rootReducer))
@@ -18,13 +20,17 @@ if (process.env.NODE_ENV !== 'production' && module.hot) {
 
 const render = (App) => {
     createRoot(document.getElementById('root')).render(
+        <%if (fnFeatures.includes('web3')) {-%>
         <WagmiConfig client={client}>
+        <%}-%>
             <Provider store={store}>
                 <Suspense fallback={<div className="gb-center-container"><Spin /></div>}>
                     <App />
                 </Suspense>
             </Provider>
+        <%if (fnFeatures.includes('web3')){-%>
         </WagmiConfig>
+        <%}-%>
     )
 };
 

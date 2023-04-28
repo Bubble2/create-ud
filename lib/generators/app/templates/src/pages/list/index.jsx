@@ -1,7 +1,6 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { Button, Spin } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { useBlockNumber } from 'wagmi';
 import api from '@state/api'
 
 const { useLazyGetPokemonByNameQuery, useLazyGetAbcByNameQuery } = api
