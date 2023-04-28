@@ -8,8 +8,7 @@
         "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js --mode=production --env=env-prod",
         "build:pack": "npm run build  && npm run pack",
         "build:test": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js --mode=production --env=env-test && npm run pack:test",
-        "server": "http-server -P http://172.16.12.112:9798 ./build",
-        "prepare": "husky install"
+        "server": "http-server -P http://172.16.12.112:9798 ./build"
     },
     "target": "web",
     "author": "guozhaodong",
@@ -25,6 +24,7 @@
         "@babel/preset-typescript": "^7.18.6",
         "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
         "@redux-devtools/extension": "^3.2.2",
+        "@svgr/webpack": "^7.0.0",
         "@types/react": "^17.0.43",
         "@types/react-router-dom": "^5.3.3",
         "archiver": "^5.3.0",
@@ -35,6 +35,7 @@
         "cross-env": "^7.0.3",
         "css-loader": "^6.7.1",
         "css-minimizer-webpack-plugin": "^3.4.1",
+        "file-loader": "^6.2.0",
         "html-webpack-plugin": "^5.5.0",
         "http-server": "^14.1.0",
         "husky": "^8.0.0",
@@ -66,14 +67,14 @@
     "dependencies": {
         "@ant-design/cssinjs": "^1.9.1",
         "@loadable/component": "^5.15.2",
-<%if (fnFeatures.includes('web3')) {-%>
+<% if (fnFeatures.includes('web3')) { -%>
         "@metamask/detect-provider": "^2.0.0",
-<%}-%>
+<% } -%>
         "@reduxjs/toolkit": "^1.9.1",
         "antd": "^5.3.0",
         "axios": "^0.20.0",
         "classnames": "^2.2.6",
-<%if (fnFeatures.includes('web3')) {-%>
+<% if (fnFeatures.includes('web3')) { -%>
         "ethers": "^5.7.2",
 <%}-%>
         "i18next": "^20.3.1",
@@ -91,9 +92,11 @@
         "react-router-dom": "^5.2.0",
         "react-transition-group": "^4.4.2",
         "redux": "^4.2.0",
-        "use-interval": "^1.4.0"
-<%if (fnFeatures.includes('web3')) {-%>,
+<% if(fnFeatures.includes('web3')) { -%>
+        "use-interval": "^1.4.0",
         "wagmi": "^0.11.7"
+<% } else { -%>
+        "use-interval": "^1.4.0"
 <%}-%>
     },
     "lint-staged": {

@@ -1,4 +1,3 @@
-import Header from '../biz/connectWallet';
 import { Layout, Spin, App } from 'antd';
 import React, { useMemo, useEffect, useState, useRef, Suspense } from "react";
 import Menu from "../biz/menu";
