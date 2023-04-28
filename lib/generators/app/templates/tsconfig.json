@@ -38,9 +38,6 @@
             "@router/*": [
                 "./src/router/*"
             ],
-            "@connectors/*": [
-                "./src/connectors/*"
-            ],
             "@constants/*": [
                 "./src/constants/*"
             ],
@@ -55,12 +52,6 @@
             ],
             "@state/*": [
                 "./src/state/*"
-            ],
-            "@js/*": [
-                "./src/js/*"
-            ],
-            "@apollo-client/*": [
-                "src/apollo-client/*"
             ],
             "@src/*": [
                 "./src/*"
